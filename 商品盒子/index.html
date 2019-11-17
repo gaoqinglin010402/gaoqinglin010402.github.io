@@ -2,9 +2,176 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>天猫</title>
+		<style>
+			
+		
+			.flex-container {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				-webkit-justify-content: space-around;
+				justify-content: space-around;
+				flex-flow: row wrap;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			.flex-container>* {
+				padding: 0;
+				flex: 0 100%;
+			}
+
+			.main {
+				text-align: left;
+				background: white;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			p {
+				color: white;
+			}
+
+			.header {
+				line-height: 45px;
+				background: red;
+				height: 50px;
+			}
+
+			.footer {
+				background: white;
+			}
+
+			.aside {
+				margin: 10px;
+				background: white;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+			@media all and (min-width: 600px) {
+				.aside {
+					flex: 0 0 auto;
+					width: 28%;
+				}
+
+				
+				}
+
+				.aside1 {
+					order: 1;
+				}
+
+				.aside2 {
+					order: 2;
+				}
+
+				.aside3 {
+					order: 3;
+				}
+
+				.aside4 {
+					order: 4;
+				}
+
+				.aside5 {
+					order: 5;
+				}
+
+				.aside6 {
+					order: 6;
+				}
+
+				.footer {
+					order: 7;
+				}
+			}
+
+			@media all and (min-width: 800px) {
+				.aside {
+					flex: 0 0 auto;
+					width: 13%;
+				}
+
+				
+				.aside1 {
+					order: 1;
+				}
+
+				.aside2 {
+					order: 1;
+				}
+
+				.aside3 {
+					order: 1;
+				}
+
+				.aside4 {
+					order: 1;
+				}
+
+				.aside5 {
+					order: 1;
+				}
+
+				.aside6 {
+					order: 1;
+				}
+
+				.footer {
+					order: 3;
+				}
+			}
+		
+		</style>
+		
 	</head>
 	<body>
+		<div class="flex-container" style="">
+			
+			<div class="header">
+				<center><font style=" border-bottom: 15px; size: 7; color: white;">回&nbsp;&nbsp;力&nbsp;&nbsp;官&nbsp;&nbsp;方&nbsp;&nbsp;旗&nbsp;&nbsp;舰&nbsp;&nbsp;店</font>
+					<br />&nbsp;
+				</center>
+			</div>
+			
+			<div class="aside aside1"><img src="img/1.jpg">
+				
+			</div>
+			
+			<div class="aside aside2"><img src="img/2.jpg">
+				
+			</div>
+			
+			<div class="aside aside3"><img src="img/3.jpg">
+				
+			</div>
+			
+			<div class="aside aside4"><img src="img/4.jpg">
+				
+			</div>
+			
+			<div class="aside aside5"><img src="img/5.jpg">
+				
+			</div>
+			
+			<div class="aside aside6"><img src="img/6.jpg">
+				
+			</div>
+			
+			</div>
+			
+		<div class="footer" style="height: 50px;">
+			<p></p>
+		</div>
 		
+		</div>
+
+	
+
+<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div>
 	</body>
 </html>
