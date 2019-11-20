@@ -4,57 +4,89 @@
 		<meta charset="utf-8" />
 		<title>实验2</title>
 		<style>
-			.flex-container {
-    display: -webkit-flex;
-    display: flex;  
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    font-weight: bold;
-    text-align: center;
-}
-
-.flex-container > * {
-    padding: 10px;
-    flex: 1 100%;
-}
-
-.main {
-    text-align: left;
-    background: cornflowerblue;
-}
-
-.header {background: coral;}
-.footer {background: lightgreen;}
-.aside1 {background: moccasin;}
-.aside2 {background: violet;}
-
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
-    .main    { flex: 3 0px; }
-    .aside1 { order: 1; } 
-    .main    { order: 2; }
-    .aside2 { order: 3; }
-    .footer  { order: 4; }
-}
+			
 		</style>
 	</head>
 	<body>
-		
+姓名：<input type="text" id="name" />
+年龄：<input type="text" id="age" />
+<input type="button" value="添加"  id="btn1"/>
+<table id="tab1" border="1" width="500">
+<thead>
+<td>ID</td>
+<td>姓名</td>
+<td>年龄</td>
+<td>操作</td>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>李明</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>张三</td>
+<td>19</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>李四</td>
+<td>22</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>王五</td>
+<td>11</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+<script type="text/jscript">
+var oTab=document.getElementById("tab1");
+var oBtn=document.getElementById("btn1");
+var oName=document.getElementById("name");
+var oAge=document.getElementById("age");
+var id=oTab.tBodies[0].rows.length+1
+oBtn.οnclick=function()
+{
+	
+	var oTr=document.createElement("tr");
+var oTd=document.createElement("td");
+oTd.innerHTML=id++;
+//设置变量ID
+oTr.appendChild(oTd);//添加数据
 
-<div class="flex-container">
-  <header class="header">头部</header>
-  <article class="main">
-    <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程(www.runoob.com)提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供了大量的在线实例，通过实例，您可以更好的学习编程。</p>
-  </article>
-  <aside class="aside aside1">
-  	<img src="https://img.alicdn.com/imgextra/i3/1122765402/TB2XakEkpXXXXXtXpXXXXXXXXXX_!!1122765402.jpg_Q90.jpg_.webp"/>
-  <aside class="aside aside2"><img src="https://img.alicdn.com/imgextra/i3/1122765402/TB2XakEkpXXXXXtXpXXXXXXXXXX_!!1122765402.jpg_Q90.jpg_.webp"/></aside>
-  <footer class="footer"><img src="https://img.alicdn.com/imgextra/i3/1122765402/TB2XakEkpXXXXXtXpXXXXXXXXXX_!!1122765402.jpg_Q90.jpg_.webp"/></footer>
-</div>
+var oTd=document.createElement("td");
+oTd.innerHTML=oName.value;
+oTr.appendChild(oTd);//添加数据
 
+var oTd=document.createElement("td");
+oTd.innerHTML=oAge.value;
+oTr.appendChild(oTd);//添加数据
+
+var oTd=document.createElement("td");
+oTd.innerHTML='<a href="#">删除</a>';
+oTr.appendChild(oTd);//添加数据
+
+
+
+//删除函数
+oTd.getElementsByTagName("a")[0].οnclick=function()
+{
+oTab.tBodies[0].removeChild(this.parentNode.parentNode) 
+};
+
+
+//添加数据
+oTab.tBodies[0].appendChild(oTr);
+}
+</script>
+	
 	</body>
 </html>
    
